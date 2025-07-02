@@ -50,23 +50,8 @@ You are going to be given a non-empty string. Your job is to return the middle c
 
 **Solutions**:
 ```txt
-$stop = [
-    [10, 0],
-    [3, 5],
-    [5, 8],
-];
-
-function number(array $stop): int {
-  
-  $totalPeople = 0;
-  
-  foreach ($stop as $bus_stops) {
-      $peopleOn = $bus_stops[0];
-      $peopleOff = $bus_stops[1];
-    
-      $totalPeople = $totalPeople + $peopleOn - $peopleOff;
-  }
-  
-  return $totalPeople;
+function getMiddle($text) {
+  $length = strlen($text);
+  return substr($text, ($length - 1) / 2, $length % 2 == 0 ? 2 : 1);
 }
 ```
