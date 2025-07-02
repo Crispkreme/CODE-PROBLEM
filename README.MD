@@ -11,27 +11,22 @@ The second value in the first pair in the array is 0, since the bus is empty in 
 
 **Input**:
 ```txt
+$stop = [
+    [10, 0],
+    [3, 5],
+    [5, 8],
+];
 
-    <?php
+function number(array $stop): int {
+  
+  $totalPeople = 0;
+  
+  foreach ($stop as $bus_stops) {
+      $peopleOn = $bus_stops[0];
+      $peopleOff = $bus_stops[1];
     
-        $stop = [
-            [10, 0],
-            [3, 5],
-            [5, 8],
-        ];
-        
-        function number(array $stop): int {
-          
-          $totalPeople = 0;
-          
-          foreach ($stop as $bus_stops) {
-              $peopleOn = $bus_stops[0];
-              $peopleOff = $bus_stops[1];
-            
-              $totalPeople = $totalPeople + $peopleOn - $peopleOff;
-          }
-          
-          return $totalPeople;
-        }
-    
-    ?>
+      $totalPeople = $totalPeople + $peopleOn - $peopleOff;
+  }
+  
+  return $totalPeople;
+}
