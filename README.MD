@@ -30,6 +30,7 @@ function number(array $stop): int {
   
   return $totalPeople;
 }
+```
 
 ### 🚧 Problem: Word Problem
 
@@ -68,3 +69,4 @@ function number(array $stop): int {
   
   return $totalPeople;
 }
+```
