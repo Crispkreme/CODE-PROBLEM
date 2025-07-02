@@ -47,3 +47,53 @@ function getMiddle($text) {
   return substr($text, ($length - 1) / 2, $length % 2 == 0 ? 2 : 1);
 }
 ```
+
+### 🚧 Problem: Word Problem
+
+**Description**:  
+You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+- If the string's length is odd, return the middle character.
+- If the string's length is even, return the middle 2 characters.
+
+**Example**:
+```txt
+"test" --> "es"
+"testing" --> "t"
+"middle" --> "dd"
+"A" --> "A"
+```
+
+**Solutions**:
+```txt
+
+// strlen = returns the length of a string.
+// substr = returns a part of a string.
+
+function getMiddle($text) {
+  $length = strlen($text);
+  return substr($text, ($length - 1) / 2, $length % 2 == 0 ? 2 : 1);
+}
+```
+
+### 🚧 Problem: Word Problem
+
+**Description**:  
+Implement a function that computes the difference between two lists. The function should remove all occurrences of elements from the first list (a) that are present in the second list (b). The order of elements in the first list should be preserved in the result.
+
+**Example**:
+```txt
+If a = [1, 2] and b = [1], the result should be [2].
+If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
+```
+
+**Solutions**:
+```txt
+
+// array_values = returns an array containing all the values of an array.
+// array_diff = compares the values of two (or more) arrays, and returns the differences.
+
+function arrayDiff($a, $b) {
+  return array_values(array_diff($a, $b));
+}
+```
