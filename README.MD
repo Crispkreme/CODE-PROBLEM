@@ -38,6 +38,10 @@ You are going to be given a non-empty string. Your job is to return the middle c
 
 **Solutions**:
 ```txt
+
+// strlen = returns the length of a string.
+// substr = returns a part of a string.
+
 function getMiddle($text) {
   $length = strlen($text);
   return substr($text, ($length - 1) / 2, $length % 2 == 0 ? 2 : 1);
