@@ -11,24 +11,12 @@ The second value in the first pair in the array is 0, since the bus is empty in 
 
 **Input**:
 ```txt
-$stop = [
-    [10, 0],
-    [3, 5],
-    [5, 8],
-];
 
-function number(array $stop): int {
-  
-  $totalPeople = 0;
-  
-  foreach ($stop as $bus_stops) {
-      $peopleOn = $bus_stops[0];
-      $peopleOff = $bus_stops[1];
-    
-      $totalPeople = $totalPeople + $peopleOn - $peopleOff;
-  }
-  
-  return $totalPeople;
+// array_sum = returns the sum of all the values in the array.
+// array_column = returns the values from a single column in the input array.
+
+function number($bus_stops) {
+  return array_sum(array_column($bus_stops, 0)) - array_sum(array_column($bus_stops, 1));
 }
 ```
 
