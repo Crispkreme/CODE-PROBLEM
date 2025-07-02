@@ -30,3 +30,41 @@ function number(array $stop): int {
   
   return $totalPeople;
 }
+
+### 🚧 Problem: Word Problem
+
+**Description**:  
+You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+- If the string's length is odd, return the middle character.
+- If the string's length is even, return the middle 2 characters.
+
+**Example**:
+```txt
+"test" --> "es"
+"testing" --> "t"
+"middle" --> "dd"
+"A" --> "A"
+```
+
+**Solutions**:
+```txt
+$stop = [
+    [10, 0],
+    [3, 5],
+    [5, 8],
+];
+
+function number(array $stop): int {
+  
+  $totalPeople = 0;
+  
+  foreach ($stop as $bus_stops) {
+      $peopleOn = $bus_stops[0];
+      $peopleOff = $bus_stops[1];
+    
+      $totalPeople = $totalPeople + $peopleOn - $peopleOff;
+  }
+  
+  return $totalPeople;
+}
