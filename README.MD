@@ -97,3 +97,26 @@ function arrayDiff($a, $b) {
   return array_values(array_diff($a, $b));
 }
 ```
+
+### 🚧 Problem: Word Problem
+
+**Description**:  
+Implement a function that computes the difference between two lists. The function should remove all occurrences of elements from the first list (a) that are present in the second list (b). The order of elements in the first list should be preserved in the result.
+
+**Example**:
+```txt
+If a = [1, 2] and b = [1], the result should be [2].
+If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
+```
+
+**Solutions**:
+```txt
+
+// min =  returns the lowest value in an array, or the lowest value of several specified values.
+// array_map = sends each value of an array to a user-made function, and returns an array with new values, given by the user-made function.
+// explode = breaks a string into an array.
+
+function findShort($str){
+   return min(array_map('strlen', (explode(' ', $str))));
+}
+```
